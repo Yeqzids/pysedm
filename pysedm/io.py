@@ -266,7 +266,7 @@ def filename_to_guider(filename, astrom=True, extinction=".fits", nomd5=True):
     
 def parse_filename(filename):
     """ """
-    filename = filename.split(".")[0]
+    filename = filename.split(".")[-2]
     if filename.startswith("crr"):
         crr, b, ifudate, hh, mm, ss, *targetname  = filename.split("_")
     else:
